@@ -1,0 +1,180 @@
+header {
+  background-color: var(--surface);
+  box-shadow: var(--main-shadow);
+  grid-area: header;
+
+  display: grid;
+  grid-template-columns: 1fr max-content;
+  grid-template-rows: repeat(2, max-content);
+  padding: var(--main-padding) var(--bigger-padding);
+  gap: var(--main-padding);
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  gap: var(--small-padding);
+}
+
+.search-btn {
+  min-width: 48px;
+  min-height: 48px;
+  width: 48px;
+  height: 48px;
+}
+
+.search-input {
+  flex: 1;
+
+  background-color: var(--input-surface);
+  border-radius: var(--big-padding);
+  padding: var(--small-padding) var(--main-padding);
+  font-size: 1.3em;
+  min-width: 0;
+
+  border: none;
+  outline: none;
+
+  &:focus {
+    outline: 2px solid var(--on-surface);
+  }
+}
+
+.profile-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: var(--main-padding);
+}
+
+.notification-btn {
+  min-width: 48px;
+  min-height: 48px;
+  width: 48px;
+  height: 48px;
+}
+
+.profile-btn {
+  display: flex;
+  gap: var(--main-padding);
+  align-items: center;
+  border-radius: var(--big-padding);
+  padding-right: var(--main-padding);
+  outline: none;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  transition: background-color 0.1s;
+
+  &:hover,
+  &:active {
+    background-color: var(--input-surface);
+  }
+
+  &:focus {
+    outline: 2px solid var(--on-surface);
+  }
+}
+
+.profile-icon-small {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+}
+
+.profile-name-small {
+  font-weight: 700;
+  font-size: 1.6em;
+  text-align: start;
+}
+
+.profile-display {
+  display: flex;
+  align-items: center;
+  gap: var(--main-padding);
+}
+
+.profile-icon-anchor {
+  border-radius: 50%;
+  width: 92px;
+  height: 92px;
+  position: relative;
+
+  &:hover::after,
+  &:active::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 50%;
+  }
+
+  &:focus {
+    outline: 2px solid var(--on-surface);
+  }
+}
+
+.profile-icon {
+  height: 100%;
+  background-color: var(--project-detail);
+  border-radius: 50%;
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--smaller-padding);
+}
+
+.greeting {
+  font-weight: 700;
+  font-size: 1.2em;
+}
+
+.profile-name {
+  font-weight: 700;
+  font-size: 1.8em;
+  color: var(--on-surface);
+  text-decoration: none;
+  border-radius: var(--small-padding);
+
+  &:hover,
+  &:active {
+    color: var(--colored-surface);
+  }
+
+  &:focus {
+    outline: 2px solid var(--on-surface);
+    outline-offset: var(--smaller-padding);
+  }
+}
+
+.header-buttons {
+  display: flex;
+  align-items: center;
+  gap: var(--main-padding);
+
+  button {
+    background-color: var(--colored-surface);
+    color: var(--on-colored-surface);
+    border: none;
+    outline: none;
+    padding: var(--small-padding) var(--main-padding);
+    border-radius: var(--main-padding);
+    font-weight: bold;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.1s;
+    min-width: 120px;
+
+    &:hover,
+    &:active {
+      background-color: var(--colored-surface-active);
+    }
+
+    &:focus {
+      outline: 2px solid var(--on-surface);
+    }
+  }
+}
